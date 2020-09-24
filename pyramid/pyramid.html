@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Pyramid Word</title>
+</head>
+<body>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <div class = 'header'>
+        <a href="https://www.fetchrewards.com/">
+            <img alt="Fetch Rewards Logo" src="img/frlogo.png" width=220" height="70">
+        </a>
+        <h1>Coding Exercise - Backend Software Engineering</h1>
+    </div>
+
+    <h2 class = 'Section'>Is It a Pyramid Word?</h1>
+    <p class = 'intro'>A word is a pyramid word if you can arrange 
+        the letters in increasing frequency, starting with 1 and continuing 
+        without gaps and without duplicates.</p>
+    <h2 class = 'Section'>Examples</h2>
+    <ul>
+        <li>banana is a pyramid word because you have 1 'b', 2 'n's, and 3 'a's.</li>
+        <li>bandana is not a pyramid word because you have 1 'b' and 1 'd'.</li>
+    </ul>
+    <h2 class = 'Section'>Now Let's see if your favoriate word is a pyramid word!</h2>
+    <p>Enter your word here: </p>
+    <input type = 'text' id = 'word' name = 'word'><br>
+        
+    <input type = 'submit' id='submit' value = 'check' onclick="check(document.getElementById('word').value)">
+    <p id='result'></p>
+    <p id='errormsg'></p>
+    <div class="footer">Website developed by <a href = 'https://www.linkedin.com/in/yihan-li-0629a8105/'>Yihan Li<a></a> (yihan.li@wisc.edu)
+        
+    </div>
+</body>
+</html>

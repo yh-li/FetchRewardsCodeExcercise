@@ -1,0 +1,32 @@
+#result{
+    color:black;
+}
+#errormsg{
+    color:red;
+}
+.header img {
+    float: left;
+    width: 220px;
+    height: 70px;
+}
+  
+.header h1 {
+    position: relative;
+    top: 18px;
+    left: 10px;
+    
+}
+.header{
+    margin-bottom: 50px;
+}
+#word{
+    margin-bottom: 10px;
+}
+.footer{ 
+    position: fixed;     
+    text-align: center;    
+    bottom: 50px; 
+    width: 100%;
+    color:gray;
+    font-size: 80%;
+}  
