@@ -1,4 +1,10 @@
+/**
+ * 
+ * @param {*} word the input string that is going to be checked
+ * This function checks if the input String, word, is composed of alphabet characters only
+ */
 function allLetter(word){
+    //only contains character A-Z and a-z
     var letters = /^[A-Za-z]+$/;
     if(word.match(letters)){
         return true;
@@ -8,7 +14,16 @@ function allLetter(word){
     }
     
 }
+
+/**
+ * 
+ * @param {*} word the input string that is going to be checked.
+ * Precondition: word only contains alphabet characters
+ * This function checks if the input string, word, is a pyramid word. It returns whether the 
+ * word is a pyramid word and a message explaining the results
+ */
 function isPyramid(word){
+    //stores the frequency of each character
     var counts = {};
     for(var i=0;i<word.length;i++){
         if(word.charAt(i).charCodeAt(0)-'a'.charCodeAt(0)>=0 && 
@@ -27,7 +42,7 @@ function isPyramid(word){
             }
         }
     }
-    //sort by key
+    //sort by value
     var charCounts = [];
     for(var char in counts){
         charCounts.push([char,counts[char]]);
@@ -49,6 +64,7 @@ function isPyramid(word){
         s = s+',';
     }
     if(charCounts.length==2){
+        //if there are only two characters in the word
         //remove the extra comma
         s=s.slice(0,-1);
     }
@@ -65,6 +81,14 @@ function isPyramid(word){
     }
     return [ispyramid,s];
 }
+
+/**
+ * 
+ * @param {*} word 
+ * Checks if the word is composed of alphabet characters only first.
+ * If so, check if it is a pyramid word.
+ * If not, print the error message
+ */
 function check(word){
     document.getElementById("result").textContent = '';
     document.getElementById("errormsg").textContent = '';
@@ -76,12 +100,9 @@ function check(word){
         }else{
             msg = msg +". So it is not a pyramid word.";
         }
-        //alert(msg);
         document.getElementById("result").textContent = msg;
     }else{
         let msg = "Please make sure that the input is a non-empty string only containing alphabet chracters (A-Z or a-z)"
-        //alert(msg);
-        
         document.getElementById("errormsg").textContent = msg;
     }
 }
