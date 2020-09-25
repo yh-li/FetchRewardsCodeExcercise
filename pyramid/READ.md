@@ -1,0 +1,1 @@
+This is a project for Fetch Rewards Coding Excercise. It asks the user for an input string, and then check if the string is a pyramid word. After downloading and unzipping this repository, you can go ahead and run the pyramid.html file in your web browser. Should there be any problems, please don't hesitate to contact the developer, Yihan Li, at yihan.li@wisc.edu.
